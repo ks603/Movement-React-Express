@@ -47,17 +47,17 @@ router.post(
 
     const {
       company,
-      location,
       website,
+      location,
       bio,
-      skills,
       status,
       githubusername,
+      skills,
       youtube,
+      facebook,
       twitter,
       instagram,
       linkedin,
-      facebook,
     } = req.body
 
     const profileFields = {}
