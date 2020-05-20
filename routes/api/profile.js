@@ -14,19 +14,19 @@ const User = require('../../models/User')
 router.get('/me', auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({
-      user: req.user.id,
-    }).populate('user', ['name', 'avatar'])
+      user: req.user.id
+    }).populate('user', ['name', 'avatar']);
 
     if (!profile) {
-      return res.status(400).json({ msg: 'Profile not found' })
+      return res.status(400).json({ msg: 'There is no profile for this user' });
     }
 
-    res.json(profile)
+    res.json(profile);
   } catch (err) {
-    console.error(err.message)
-    res.status(500).send('Server Error')
+    console.error(err.message);
+    res.status(500).send('Server Error');
   }
-})
+});
 
 // @route    Post api/profile/me
 // @desc     Create or update user profile
