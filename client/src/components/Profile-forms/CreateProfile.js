@@ -153,7 +153,7 @@ const CreateProfile = ({
               type='button'
               className='btn btn-light'
             >
-              Add Social Network Links
+              Add Social Networks
 					</button>
             <span>Optional</span>
           </div>
