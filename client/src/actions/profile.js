@@ -1,5 +1,5 @@
-import api from '../utils/api';
-import { setAlert } from './alert';
+import api from '../utils/api'
+import { setAlert } from './alert'
 
 import {
   GET_PROFILE,
@@ -216,6 +216,7 @@ export const deleteAccount = () => async dispatch => {
       dispatch({ type: ACCOUNT_DELETED });
 
       dispatch(setAlert('Your account has been permanently deleted'));
+
     } catch (err) {
       dispatch({
         type: PROFILE_ERROR,
