@@ -11,7 +11,7 @@ import { getProfileById } from '../../actions/profile';
 
 const Profile = ({
   getProfileById,
-  profile: { profile, loading },
+  profile: { profile, loading, avatar },
   auth,
   match
 }) => {
@@ -21,6 +21,7 @@ const Profile = ({
 
   return (
     <Fragment>
+      <img src={avatar} alt='' className='round-img' />
       {profile === null || loading ? (
         <Spinner />
       ) : (
