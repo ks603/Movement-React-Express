@@ -1,5 +1,5 @@
-import api from '../utils/api'
-import { setAlert } from './alert'
+import api from '../utils/api';
+import { setAlert } from './alert';
 
 import {
   GET_PROFILE,
@@ -66,6 +66,7 @@ export const getProfileById = userId => async dispatch => {
 };
 
 // Get Github repos
+
 export const getGithubRepos = username => async dispatch => {
   try {
     const res = await api.get(`/profile/github/${username}`);
@@ -216,7 +217,6 @@ export const deleteAccount = () => async dispatch => {
       dispatch({ type: ACCOUNT_DELETED });
 
       dispatch(setAlert('Your account has been permanently deleted'));
-
     } catch (err) {
       dispatch({
         type: PROFILE_ERROR,
