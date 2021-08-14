@@ -9,7 +9,7 @@ const api = axios.create({
   }
 });
 /**
- intercept any error responses from the api
+ intercept any error (test ssh ) responses from the api
  and check if the token is no longer valid.
  ie. Token has expired
  logout the user if the token has expired
